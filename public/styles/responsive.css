@@ -1,0 +1,47 @@
+@media screen and (min-width: 600px) {
+  header h1 {
+    font-size: 1.8rem;
+
+  }
+  
+  main {
+    max-width: 600px;
+
+  }
+
+  .slider-container {
+    padding: 0 50px;
+
+  }
+
+  .slider-container .price-infos {
+    width: 100%;
+    justify-content: space-between;
+
+  }
+
+  .price-container {
+    max-width: 300px;
+    position: static;
+
+    justify-content: flex-end;
+  }
+
+  .slider {
+    margin-bottom: 80px;
+
+  }
+
+  .billing-container {
+    width: 100%;
+
+    justify-content: space-evenly;
+
+  }
+
+  .billing-container h5 {
+    font-size: 1rem;
+
+  }
+
+}

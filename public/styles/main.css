@@ -1,0 +1,332 @@
+@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@400;600;800&display=swap');
+
+:root {
+  --full-slider-bar: hsl(174, 77%, 80%);
+  --slider-background: hsl(174, 86%, 45%);
+  --discount-background: hsl(14, 92%, 95%);
+  --discount-text: hsl(15, 100%, 70%);
+  --cta-text: hsl(226, 100%, 87%);
+
+  --pricing-component-background: hsl(0, 0%, 100%);
+  --main-background: hsl(230, 100%, 99%);
+  --empty-slider-bar: hsl(224, 65%, 95%);
+  --toggle-background: hsl(223, 50%, 87%);
+  --main-text: hsl(225, 20%, 60%);
+  --text-and-cta-background: hsl(227, 35%, 25%);
+
+}
+
+* {
+  box-sizing: border-box;
+
+  margin: 0;
+  padding: 0;
+
+  font-family: 'Manrope', sans-serif;
+}
+
+body {
+  background-color: var(--main-background);
+  min-height: 75vh;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+
+  padding: 50px 30px 20px;
+
+}
+
+body::before {
+  content: '';
+  background-image: url('../assets/bg-pattern.svg');
+  background-repeat: no-repeat;
+  background-size: cover;
+
+  width: 100%;
+  height: 50%;
+
+  position: absolute;
+  top: 0;
+
+  z-index: -1;
+
+}
+
+header {
+  width: 100%;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  position: relative;
+
+  text-align: center;
+
+  margin-bottom: 70px;
+
+}
+
+header h1 {
+  color: var(--text-and-cta-background);
+  font-size: 1.2rem;
+  font-weight: 800;
+
+  margin-bottom: 20px;
+
+}
+
+header h5 {
+  width: 75%;
+
+  color: var(--main-text);
+  font-size: 1rem;
+  font-weight: 600;
+  line-height: 1.7rem;
+
+}
+
+header img {
+  width: 150px;
+
+  position: absolute;
+
+  z-index: -1;
+
+}
+
+main {
+  background-color: white;
+  width: 100%;
+  height: auto;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+
+  padding: 30px 0;
+
+  border-radius: 10px;
+
+  box-shadow: 0 0 15px 2px rgba(0, 0, 0, 0.1);
+
+}
+
+.slider-container {
+  width: 100%;
+  min-height: 200px;
+  
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  position: relative;
+
+  padding: 0px 15px;
+
+  margin-bottom: 40px;
+
+}
+
+.slider-container .price-infos {
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+
+  margin-bottom: 40px;
+
+}
+
+.price-infos h3 {
+  color: var(--main-text);
+  font-size: 1rem;
+  font-family: 600;
+  text-transform: uppercase;
+
+}
+
+.price-container {
+  width: 100%;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  position: absolute;
+  bottom: 70px;
+
+}
+
+.price-infos .price {
+  color: var(--text-and-cta-background);
+  font-size: 2.2rem;
+  font-weight: 800;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+}
+
+.price-infos .billing-type {
+  color: var(--main-text);
+  font-size: 1rem;
+  font-weight: 600;
+
+  margin-left: 10px;
+
+}
+
+.slider {
+  background-color: var(--full-slider-bar);
+
+  -webkit-appearance: none;
+  width: 100%;
+  height: 8px;
+
+  margin-bottom: 120px; 
+
+  border-radius: 5px;
+  outline: none;
+
+}
+
+.slider::-webkit-slider-thumb {
+  background: var(--slider-background);
+  background-image: url('../assets/icon-slider.svg');
+  background-repeat: no-repeat;
+  background-position: center;
+
+  width: 40px; 
+  height: 40px; 
+
+  -webkit-appearance: none;
+  appearance: none;
+
+  border-radius: 50%;
+
+  cursor: pointer;
+
+  box-shadow: 0 5px 15px var(--slider-background);
+
+}
+
+.billing-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+}
+
+.billing-container h5 {
+  color: var(--main-text);
+  font-size: 2.8vmin;
+
+  text-align: center;
+
+  margin: 0 5px;
+
+}
+
+.billing-button {
+  background-color: var(--toggle-background);
+  width: 70px;
+  height: 30px;
+
+  position: relative;
+  
+  margin: 0 5px;
+  padding: 5px;
+
+  border-radius: 40px;
+
+  cursor: pointer;
+
+  transition: 0.4s;
+
+}
+
+.billing-button::before {
+  content: '';
+  background-color: white;
+
+  width: 20px;
+  height: 20px;
+
+  position: absolute;
+  left: 5px;
+
+  border-radius: 50%;
+
+  transition: 0.4s;
+  
+}
+
+.billing-button.yearly::before {
+  transform:translateX( 198%);
+
+}
+
+.billing-percent {
+  background-color: var(--discount-background);
+  
+  color: var(--discount-text);
+  font-size: 2.7vmin;
+
+  border-radius: 40px;
+
+  margin-left: 5px;
+
+  padding: 4px 7px;
+
+}
+
+.start-trial-container {
+  width: 100%;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  padding-top: 30px;
+
+  border-top: 1px solid var(--toggle-background);
+
+}
+
+.start-trial-container ul {
+  text-align: center;
+
+  list-style: url('../assets/icon-check.svg');
+
+  margin-bottom: 40px;
+
+}
+
+.start-trial-container li {
+  width: auto;
+
+  margin-bottom: 10px;
+
+}
+
+.start-trial-container button {
+  background-color: var(--text-and-cta-background);
+  width: 50%;
+  height: 40px;
+
+  color: var(--main-text);
+  font-weight: 800;
+
+  border: none;
+  border-radius: 40px;
+
+  cursor: pointer;
+
+}

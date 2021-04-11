@@ -1,23 +1,25 @@
 const btnBilling = document.querySelector('.billing-button')
 const slider = document.querySelector('.slider')
 
-console.log(slider)
-
 btnBilling.addEventListener('click', () => {
+  billingType()
+  priceCalculator()
+})
+
+slider.addEventListener('input', priceCalculator)
+
+function billingType() {
   const billingText = document.querySelector('.billing-type')
   
   btnBilling.classList.toggle('yearly')
 
   if ( btnBilling.classList[1] == 'yearly' ) {
-    billingText.innerHTML = '/ year'
+    return billingText.innerHTML = '/ year'
+  }
+  
+  return billingText.innerHTML = '/ month'
 
-  } else billingText.innerHTML = '/ month'
-
-
-  priceCalculator()
-})
-
-slider.addEventListener('input', priceCalculator)
+}
 
 function priceCalculator() {
   const priceText = document.querySelector('.price')

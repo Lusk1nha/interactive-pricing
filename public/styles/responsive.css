@@ -1,4 +1,17 @@
-@media screen and (min-width: 600px) {
+@media screen and (min-width: 620px) {
+  body {
+    min-height: 100vh;
+
+  }
+
+  body::before {
+    width: 100%;
+    height: 60%;
+
+    top: -150px;
+
+  }
+
   header h1 {
     font-size: 1.8rem;
 
@@ -41,6 +54,36 @@
 
   .billing-container h5 {
     font-size: 1rem;
+
+  }
+
+  .billing-percent {
+    font-size: 1rem;
+
+    padding: 5px 8px;
+
+  }
+
+  .billing-percent span[hidden] {
+    display: inline-block;
+  }
+
+  .start-trial-container {
+    flex-direction: row;
+    justify-content: space-evenly;
+
+  }
+
+  .start-trial-container ul {
+    text-align: start;
+
+    margin: 0;
+    margin-right: 50px;
+
+  }
+
+  .start-trial-container button {
+    width: 30%;
 
   }
 

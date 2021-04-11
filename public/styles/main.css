@@ -27,6 +27,7 @@
 
 body {
   background-color: var(--main-background);
+  min-width: 300px;
   min-height: 75vh;
 
   display: flex;
@@ -146,6 +147,7 @@ main {
   color: var(--main-text);
   font-size: 1rem;
   font-family: 600;
+  letter-spacing: 0.07rem;
   text-transform: uppercase;
 
 }
@@ -221,6 +223,8 @@ main {
   align-items: center;
   justify-content: center;
 
+  user-select: none;
+
 }
 
 .billing-container h5 {
@@ -276,7 +280,7 @@ main {
   background-color: var(--discount-background);
   
   color: var(--discount-text);
-  font-size: 2.7vmin;
+  font-size: 2.5vmin;
 
   border-radius: 40px;
 
@@ -311,6 +315,8 @@ main {
 
 .start-trial-container li {
   width: auto;
+
+  color: var(--main-text);
 
   margin-bottom: 10px;
 
